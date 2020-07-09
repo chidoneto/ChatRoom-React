@@ -1,0 +1,71 @@
+.MessageArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    padding: 27px 0;
+    position: sticky;
+    -webkit-box-shadow: 0 -3px 4px 0 rgba(0,0,0,.2);
+    box-shadow: 0 -3px 4px 0 rgba(0,0,0,.2);
+}
+
+.MessageArea input {
+    margin: 2px 1% 0;
+    margin-left: calc(3% + 2px);
+    width: 78%;
+    height: 20px;
+    padding: 15px 3%;
+    font-size: 100%;
+    border: 1px solid #EBEDEF;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px lightgrey;
+    overflow: scroll;
+}
+
+.MessageArea input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.MessageArea button {
+    height: 52px;
+    margin: 2px 3% 0 0px;
+    padding: 15px 2%;
+    font-size: 110%;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    color: #3B7ADB;
+    background-color: white;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.MessageArea button:hover {
+    border-radius: 5px;
+    color: white;
+    background-color: #3B7ADB;
+    cursor: pointer;
+}
+
+.MessageArea button:disabled {
+    text-decoration: line-through;
+}
+
+.MessageArea button:disabled:hover {
+    background-color: lightgray;
+}
+
+@media (max-width: 480px) {
+    .MessageArea {
+        padding: 23px 0;
+    }
+    .MessageArea input {
+        height: 18px;
+        font-size: 95%;
+    }
+    .MessageArea button {
+        height: 47px;
+        margin: 3px 3% 0 0px;
+        padding: 15px 2%;
+        font-size: 100%;
+    }
+}

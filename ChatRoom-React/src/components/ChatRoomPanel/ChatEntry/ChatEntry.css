@@ -1,0 +1,50 @@
+.ChatEntry {
+    position: relative;
+    width: 48%;
+    left: 3%;
+    padding: 0;
+    margin: 28px 0px;
+    text-align: left;
+}
+
+.ChatEntry.own {
+    left: calc(50% - 8px);
+}
+
+.ChatEntry.own .content {
+    color: white;
+    background-color: #FF1940;
+}
+
+.ChatEntry .content {
+    margin: 10px 0;
+    padding: 15px 33px;
+    background-color: white;
+    border-radius: 35px;
+    text-align: left;
+}
+
+.ChatEntry .author {
+    margin: 0 1px;
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+    .ChatEntry {
+        width: 75%;
+        left: 5%;
+        margin: 21px 0px;
+    }
+    .ChatEntry.own {
+        left: calc(22% - 10px);
+    }
+    .ChatEntry .content {
+        margin: 10px 0;
+        padding: 15px 24px;
+        border-radius: 23px;
+        font-size: 90%;
+    }
+    .ChatEntry .author {
+        font-size: 90%;
+    }
+}

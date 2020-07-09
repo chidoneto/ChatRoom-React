@@ -1,0 +1,51 @@
+.ChatRoomPanel {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    /* position: fixed; */
+    position: relative;
+    width: calc(100% - 290px);
+    left: 290px;
+    height: 100%;
+    color: #565656;
+    background-color: #EFF1F2;
+}
+
+.ChatRoomPanel .chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: calc(100% - 242px);
+    background-color: #EFF1F2;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+.ChatRoomPanel .chat-container.visible {
+    opacity: 1;
+}
+
+.ChatRoomPanel .chat-content {
+    overflow: auto;
+}
+
+.ChatRoomPanel .empty-chat-container {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 90px);
+}
+
+@media (max-width: 480px) {
+    .ChatRoomPanel {
+        left: 0;
+        top: 170px;
+        width: 100%;
+        position: absolute;
+        z-index: 60;
+    }
+    .ChatRoomPanel .chat-container {
+        height: calc(100% - 200px);
+    }
+}

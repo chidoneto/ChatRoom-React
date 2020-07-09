@@ -1,0 +1,36 @@
+.UserInfo {
+    margin-bottom: 25px;
+}
+
+.UserInfo p {
+    margin: 0;
+    padding: 4px 35px;
+}
+
+.name {
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.stats {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .UserInfo {
+        margin-bottom: 7px;
+    }
+    .UserInfo p {
+        padding: 2px 17px;
+        text-align: center;
+    }
+    .name {
+        font-size: 100%;
+        font-weight: 400;
+    }
+    .stats {
+        font-size: 70%;
+        font-weight: 400;
+    }
+}

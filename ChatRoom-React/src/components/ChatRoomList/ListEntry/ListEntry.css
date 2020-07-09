@@ -1,0 +1,20 @@
+.ListEntry p {
+    margin: 0;
+    padding: 25px 35px;
+    font-size: 100%;
+    font-weight: 400;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.ListEntry p:hover,
+.ListEntry.selected {
+    background-color: #800d20;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .ListEntry p {
+        padding: 4px 40px;
+    }
+}
