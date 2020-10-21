@@ -1,6 +1,8 @@
 ## Purpose
 
-This applicaton pretends to be a simple chat application, and it was developed in a couple of days as a coding challenge.
+This applicaton pretends to be a simple chat application, and it was developed in a couple of days as a coding challenge. See specs under ./spec
+
+I later enhanced the app to include reactions and an 'admin' capability to add new chat rooms. These two features were not part of the original spec.
 
 This application has been deployed to Heroku: [https://protected-journey-04810.herokuapp.com/](https://protected-journey-04810.herokuapp.com/) This was mostly done to be able to easily experience it in diverse devices. (There is a very raw solution for mobile, implemented with as few as possible modifications to the original desktop layout.)
 
