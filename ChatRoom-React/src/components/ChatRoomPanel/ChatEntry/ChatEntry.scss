@@ -3,12 +3,16 @@
     width: 48%;
     left: 3%;
     padding: 0;
-    margin: 28px 0px;
+    padding-bottom: 40px;
+    margin: 18px 0px;
     text-align: left;
 }
 
 .ChatEntry.own {
     left: calc(50% - 8px);
+    .ChatEntry__reaction {
+        cursor: auto;
+    }
 }
 
 .ChatEntry.own .content {
@@ -22,29 +26,51 @@
     background-color: white;
     border-radius: 35px;
     text-align: left;
+    overflow: auto;
 }
 
 .ChatEntry .author {
     margin: 0 1px;
     padding: 0;
+    left: 0;
+    bottom: 14px;
+    position: absolute;
+}
+
+.ChatEntry {
+    &__reaction {
+        height: 30px;
+        width: 30px;
+        right: 0px;
+        bottom: 22px;
+        position: absolute;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 480px) {
     .ChatEntry {
         width: 75%;
         left: 5%;
-        margin: 21px 0px;
+        margin: 0;
+        padding-bottom: 40px;
     }
     .ChatEntry.own {
         left: calc(22% - 10px);
     }
     .ChatEntry .content {
         margin: 10px 0;
-        padding: 15px 24px;
+        padding: 12px 20px;
         border-radius: 23px;
         font-size: 90%;
     }
     .ChatEntry .author {
         font-size: 90%;
+    }
+    .ChatEntry .reaction {
+        height: 30px;
+        width: 30px;
+        bottom: 28px;
+        right: -11px;
     }
 }

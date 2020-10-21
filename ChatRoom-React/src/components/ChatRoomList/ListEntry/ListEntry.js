@@ -16,8 +16,8 @@ const ListEntry = (props) => {
 };
 
 ListEntry.propTypes = {
-  selected: PropTypes.number,
-  id: PropTypes.number.isRequired,
+  selected: PropTypes.string,
+  id: PropTypes.string.isRequired,
   onSelection: PropTypes.func.isRequired,
   roomName: PropTypes.string
 };

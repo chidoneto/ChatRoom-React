@@ -2,12 +2,16 @@ const axios = require('axios');
 
 // https://historic-everglades-18064.herokuapp.com
 // http://localhost:8080
-const API_URL = process.env.API_URL || 'http://localhost:8080';
+const API_URL = process.env.API_URL || 'https://historic-everglades-18064.herokuapp.com';
 
 
 // API Calls
 const getRoomList = (id) => {
     return axios.get(`${API_URL}/api/rooms${(id !== undefined) ? '/' + id : ''}`);
+};
+
+const addRoom = ({ name, users = [] }) => {
+    return axios.post(`${API_URL}/api/rooms`, { name, users });
 };
 
 const getRoomMessages = (id) => {
@@ -19,6 +23,10 @@ const addRoomMessage = ({ name, id, message }) => {
     return axios.post(`${API_URL}/api/rooms/${id}/messages`, { name, message });
 };
 
+// '/rooms/:roomId/messages/:messageId'
+const addMessageReaction = ({ reaction , roomId, messageId }) => {
+    return axios.post(`${API_URL}/api/rooms/${roomId}/messages/${messageId}`, { reaction });
+};
 
 // Misc utility functions
 const validateUser = () => true;
@@ -39,7 +47,7 @@ const playSound = () => {
 };
 
 export {
-    getRoomList, getRoomMessages, addRoomMessage,
+    getRoomList, addRoom, getRoomMessages, addRoomMessage, addMessageReaction,
     validateUser, cleanUserList, playSound
 };
 

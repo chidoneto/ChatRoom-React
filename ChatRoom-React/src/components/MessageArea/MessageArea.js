@@ -5,13 +5,14 @@ import './MessageArea.css';
 
 
 const MessageArea = (props) => {
-  const { onMessageTyped, disabled } = props;
+  const { className, placeHolder, actionText, onMessageTyped, disabled } = props;
 
+  const classes = `MessageArea ${className}`;
   const [ messageText, setMessageText ] = useState('');
   const inputRef = useRef();
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event && event.preventDefault();
     onMessageTyped(messageText);
     setMessageText('');
   }
@@ -21,15 +22,15 @@ const MessageArea = (props) => {
   }, [disabled]);
 
   return (
-    <form className="MessageArea" onSubmit={submitHandler} >
+    <form className={classes} onSubmit={submitHandler} >
       <input ref={inputRef}
-        placeholder={"Type a message..."}
+        placeholder={placeHolder || "Type a message..."}
         value={messageText} 
-        onChange={event => setMessageText(event.target.value)}
+        onChange={event => setMessageText(event && event.target.value)}
         disabled={disabled} 
       >
       </input>
-      <button disabled={disabled} >Send</button>
+      <button disabled={disabled} >{actionText || "Send"}</button>
     </form>
   );
 };

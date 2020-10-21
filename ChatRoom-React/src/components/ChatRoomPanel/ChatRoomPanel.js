@@ -24,7 +24,7 @@ const ChatRoomPanel = (props) => {
             setIsVisible(false);
             timer1 = setTimeout(() => { 
                 getRoomMessages(currentRoom.id).then((results) => {
-                    // console.table(results.data);
+                    console.table(results.data);
                     setPanelMessages(results.data);
                     timer2 = setTimeout(() => { setIsVisible(true); }, T_TIMER_2);
                 }).catch(error => console.error(error));                
@@ -81,8 +81,8 @@ const ChatRoomPanel = (props) => {
                 (index < chats.length - 1) &&
                     (chat.name === chats[index + 1].name))) ? null : chat.name;
             const lastRef = (index === chats.length - 1) ? scrollToLast : null;
-            return (<ChatEntry key={chat.id} lastRef={lastRef}
-                content={chat.message} author={author} own={own} />);
+            return (<ChatEntry key={chat.id} messageId={chat.id} lastRef={lastRef}
+                content={chat.message} author={author} own={own} reaction={chat.reaction} />);
         });
     }
 

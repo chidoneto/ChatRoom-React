@@ -11,7 +11,7 @@ const Login = (props) => {
   const inputRef = useRef();
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event && event.preventDefault();
     onLogIn(inputValue);
   };
 

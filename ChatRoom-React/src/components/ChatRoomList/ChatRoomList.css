@@ -3,12 +3,24 @@
     width: 290px;
     height: 100%;
     margin: 0;
-    padding: 30px 0;
+    padding: 30px 0 0;
     color: white;
     background-color: #FF1940;
     text-align: left;
     box-sizing: border-box;
     top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.ChatRoomList__rooms {
+    display: block;
+}
+
+.ChatRoomList__input {
+    background-color: #FF1940;
+    box-shadow: none;
 }
 
 @media (max-width: 480px) {
