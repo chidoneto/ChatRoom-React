@@ -1,69 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
 
-## Available Scripts
+This applicaton pretends to be a simple chat application, and it was developed in a couple of days as a coding challenge.
 
-In the project directory, you can run:
+This application has been deployed to Heroku: [https://protected-journey-04810.herokuapp.com/](https://protected-journey-04810.herokuapp.com/) This was mostly done to be able to easily experience it in diverse devices. (There is a very raw solution for mobile, implemented with as few as possible modifications to the original desktop layout.)
 
-### `npm start`
+## Design Decisions
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Project developed using React.
+- Used create-react-app to create the initial framework.
+- Decided to go with functional components.
+- Most components are stateless. \<Layout\> and \<ChatRoomPanel\> contain the bulk of the application data.
+- Other components contain some state data, mostly for form management.
+- First solution didn&#39;t use context, but a couple of properties were common in various components, so I created a context to avoid &quot;drilling down&quot; properties through components.
+- Implemented property validation with _PropTypes_. There is always the possibility of a broader solution by choosing to go with _TypeScript_.
+- Didn&#39;t have a chance to write unit tests, but built a couple of simple ones to make sure the corresponding script was working properly.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Component Hierarchy
 
-### `npm test`
+See graphics in document referred at the bottom.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](RackMultipart20201021-4-126hfur_html_1f954d8542b89e2a.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# ChatRoom-React
+This doc: [https://docs.google.com/document/d/1pYv6SuMnt8JdC-\_Vj01dgbisLpWzalIRvjcjbGlmCko/edit?usp=sharing](https://docs.google.com/document/d/1pYv6SuMnt8JdC-_Vj01dgbisLpWzalIRvjcjbGlmCko/edit?usp=sharing)
